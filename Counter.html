@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Counter</title>
+    <style>
+.count{
+    width: 300px;
+    height: 200px;
+    border: 2px solid brown;
+    background-color: bisque;
+
+}
+h2{
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+.btn{
+    text-align: center;
+    
+    
+}
+.btn1:hover{
+    border-color: aqua;
+    border-radius: 100px;
+    
+}
+.btn2:hover{
+    border-color: aqua;
+    border-radius: 100px;
+    
+    
+}
+.btn3:hover{
+    border-color: aqua;
+    border-radius: 100px;
+    
+    
+}
+button{
+    background-color: rgb(216, 95, 238);
+    border-radius: 50px;
+}
+    </style>
+</head>
+<body>
+    <div class="count">
+        <h2>Counter</h2>
+        <h1 id="CounterValue">0</h1>
+<div class="btn">
+    <button class="btn1" onclick="onDec()">Decrement</button>
+    <button class="btn2"  onclick="onReset()">Reset</button>
+    <button class="btn3"  onclick="onInc()">Increment</button>
+</div>
+    </div>
+</body>
+<script>
+    let CounterElement=document.getElementById("CounterValue");
+function onInc(){
+    
+    let PreviousValue=CounterElement.textContent;
+    let UpdateValue=parseInt( PreviousValue)+1;
+    CounterElement.textContent=UpdateValue;
+
+    if(UpdateValue>0){
+        CounterElement.style.color="green"
+    }
+    else if(UpdateValue<0){
+        CounterElement.style.color="red"
+    }
+    else{
+        CounterElement.style.color="black"
+    }
+}
+function onDec(){
+    let PreviousValue=CounterElement.textContent;
+ let UpdateValue=parseInt( PreviousValue)-1;
+ CounterElement.textContent=UpdateValue;
+
+ 
+ if(UpdateValue>0){
+        CounterElement.style.color="green"
+    }
+    else if(UpdateValue<0){
+        CounterElement.style.color="red"
+    }
+    else{
+        CounterElement.style.color="black"
+    }
+}
+function onReset(){
+   let UpdateCounterValue=0;
+   CounterElement.textContent=UpdateCounterValue;
+   CounterElement.style.color="black"
+}
+</script>
+</html>

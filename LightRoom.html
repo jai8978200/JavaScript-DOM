@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+   
+    <title>Document</title>
+    <style>
+        body{
+            width: 400px;
+            height: 600px;
+             background: black;
+        }
+        .container{
+          align-items: center;
+          margin-left: 600px;
+        }
+        .container1{
+            background-color: rgb(188, 246, 244);
+            width: 400px;
+            height: 200px;
+            margin-left: 500px;
+            border-radius: 50px;
+            
+
+        }
+        .img1{
+            width: 150px;
+            height: 160px;
+            
+        }
+        .img2{
+     width: 160px;
+     height: 300px;
+     align-items: center;
+ }
+
+.switch-off{
+padding: 15px;
+width: 100px;
+background-color: red;
+color: white;
+margin: 40px 30px 30px 60px;
+border-radius: 50px;
+margin-left: 80px;
+}
+.switch-on{
+margin-left: -10px;
+margin-top: -200px;
+padding: 15px;
+width: 100px;
+background-color: green;
+color: white;
+border-radius: 50px;
+}
+h2{
+    color: rgb(116, 120, 236);
+    width: 200px;
+    margin-left: 90px;
+    
+    
+
+}
+
+    </style>
+</head>
+<body>
+    
+        <div class="container">
+            <img src="/DOM/Light Room Project/Images/On-Bulb.png" id="onBulb" class="img1">
+            <img src="https://clipartcraft.com/images/dog-clipart-transparent-background-5.png" alt="" class="img2" id="dog">
+            <!-- <img src="/DOM/Light Room Project/Images/of bulb 5.png" alt=""> -->
+        </div>
+       <div class="container1">
+        <h2 id="switchStatus">Select Your Choice</h2>
+    <button class="switch-off" onclick="switchoff()" id="switch-of">OFF</button>
+    <button class="switch-on" onclick="switchon()" id="switch-ON">ON</button>
+    
+       </div>
+        
+    
+</body>
+<script>
+function switchoff(){
+    document.getElementById("onBulb").src ="/DOM/Light Room Project/Images/of bulb 5.png"
+    document.getElementById("dog").src ="https://th.bing.com/th/id/R.80ca8638e5a16bb9b0be1304f8dd4195?rik=sDMllZ5I3hTlEg&riu=http%3a%2f%2fcanonusa.i.lithium.com%2ft5%2fimage%2fserverpage%2fimage-id%2f8218iBEAE12A7A45C909D%3fv%3d1.0&ehk=sK1fZDuTh2zf%2bZsznVOz4aY6xzgipiWV7RwSh0jmYDY%3d&risl=1&pid=ImgRaw&r=0"
+    document.getElementById("switch-of").style.backgroundColor ="grey"
+    document.getElementById("switch-ON").style.backgroundColor ="green"
+    document.getElementById("switchStatus").style.color ="red"
+    document.getElementById("switchStatus").textContent ="Switched OFF"
+}
+
+
+function switchon(){
+    document.getElementById("onBulb").src ="/DOM/Light Room Project/Images/On-Bulb.png"
+    document.getElementById("onBulb").style.marginLeft ="20px"
+    document.getElementById("dog").src ="https://clipartcraft.com/images/dog-clipart-transparent-background-5.png"
+    document.getElementById("switch-ON").style.backgroundColor ="grey"
+    document.getElementById("switch-of").style.backgroundColor ="red"
+    document.getElementById("switchStatus").style.color ="green"
+ document.getElementById("switchStatus").textContent ="Switched ON"
+}
+</script>
+</html>
